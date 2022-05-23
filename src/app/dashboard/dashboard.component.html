@@ -1,0 +1,58 @@
+<nav class="navbar navbar-light bg-dark " >
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169;  ReminderAPP </b></a>
+    <span class="quote text-light">No Stress, Feel Relaxed, It will Remind You Everything.....</span>
+    <br>
+    <h6 style="color: blue;"></h6>
+  </nav>
+  <div class="container col-md-12 mt-0">
+    <div class="row">
+        <div class=" col-md-2"></div>
+        <div class="col-md-8 col-sm-12">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Being With your Favourate Moments</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="dashboardForm">
+
+                            <div class="text-center p-3">
+                                <input type="date" formControlName="date" id="date">
+                            </div>
+                            <div class="text-center" *ngIf="(this.dashboardForm.get('date')?.touched) && this.dashboardForm.get('date')?.errors"
+                                style="color: red;">please Enter date</div>
+
+
+                            
+
+                            <div class="form-floating p-3">
+                                <textarea class="form-control text-center" formControlName="events" placeholder="Add Event Discription" id="floatingTextarea"></textarea>
+                              </div>
+
+                            <div class="text-center" *ngIf="(this.dashboardForm.get('events')?.touched)&& this.dashboardForm.get('events')?.errors"
+                                style=" color: red;">please Enter Discription</div>
+
+
+
+
+
+                            <div class="form-group text-center d-flex justify-content-around">
+
+                                <button type="button" (click)="addEvent()" style="border: 1px solid cadetblue;" class="btn ">Add Event</button>
+
+
+                                <button type="button" routerLink="/viewEvent"  style="border: 1px solid cadetblue;" class="btn ">View Event</button>
+
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-2"></div>
+        
+    </div>
+</div>

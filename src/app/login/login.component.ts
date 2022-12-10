@@ -8,8 +8,8 @@ import { DataService } from '../data.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  a="User Id  Please!!!"
+export class LoginComponent implements OnInit { 
+a="User Id  Please!!!"
 pswd="Password Please"
 userId=""
 pwd=""

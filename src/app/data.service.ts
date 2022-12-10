@@ -44,50 +44,6 @@ export class DataService {
 
   }
 
-  // add event
-
-  addEvent(userId: any, token: any, date: any, events: any) {
-
-
-    const data = {
-
-      userId,
-      token,
-      date,
-      events
-
-    }
-
-
-    // api call addEvent
-    return this.http.post(' http://localhost:3000/addEvent', data)
-
-
-  }
-
-
-  // viewDetails
-
-  viewDetails(userId: any) {
-
-    const data = {
-      userId,
-
-    }
-
-    // api call viewDetails
-    return this.http.post(' http://localhost:3000/viewDetails', data)
-  }
-
-  // delete 
-
-  deleteAcc(userId: any) {
-
-   
-
-    return this.http.delete(' http://localhost:3000/deleteAcc/'+userId)
-
-  }
 
 
 }
